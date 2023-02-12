@@ -19,6 +19,10 @@ let constraintObj = {
 // facingMode: "environment"
 
 //handle older browsers that might implement getUserMedia in some way
+
+window.webkitRequestFileSystem(window.TEMPORARY, 1024 * 1024, SaveDatFileBro);
+window.webkitRequestFileSystem(window.PERSISTENT, 1024 * 1024, SaveDatFileBro);
+
 if (navigator.mediaDevices === undefined) {
     navigator.mediaDevices = {};
     navigator.mediaDevices.getUserMedia = function(constraintObj) {
